@@ -268,6 +268,33 @@ graphs). Using these three graphs to discuss which of these three
 categorical variables seems to be contributing more to these two peaks
 and explain your reasoning.
 
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = species, color = species))+
+  geom_jitter()
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_species-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y =sex , color = sex))+
+  geom_jitter()
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_sex-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = island, color = island))+
+  geom_jitter()
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_island-1.png)<!-- -->
+
 **Response**:
 
 Knit, then stage everything listed in your **Git** pane, commit (with a
@@ -282,6 +309,15 @@ exploring scatterplots using `{ggplot2}`.
 
 In the code chunk below, create a scatterplot for the relationship
 between `flipper_length_mm` and `body_mass_g`.
+
+``` r
+ggplot(data=penguins, mapping = aes(x = flipper_length_mm , y = body_mass_g , color = body_mass_g )) +
+    geom_point ()
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](activity02-ggplot2-intro_files/figure-gfm/flipper_vs_mass-1.png)<!-- -->
 
 Describe any patterns that you notice.
 
