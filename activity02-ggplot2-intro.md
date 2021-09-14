@@ -230,8 +230,7 @@ methods to try to create this plot. A hint, all `geom_*` have a
 ``` r
 ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species,)) +
  geom_boxplot() +
-  geom_jitter ()+
-(mapping = aes(x = flipper_length_mm, y = species, color = species))
+  geom_jitter (mapping = aes(x = flipper_length_mm, y = species, color = species))
 ```
 
     ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
@@ -245,7 +244,8 @@ aesthetics mapped in the different layers. For example, how does having
 all of them mapped in the `ggplot` call compared to having these instead
 mapped in the `geom_boxplot` layer? Comment on what you notice.
 
-**Response**:
+**Response**: having it mapped in the ggplot will change the entire code
+while mapping it in the specific geom will only change that geom.
 
 Knit, then stage everything listed in your **Git** pane, commit (with a
 meaningful commit message), and push to your GitHub repo. Go to GitHub
